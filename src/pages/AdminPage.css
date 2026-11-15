@@ -1,0 +1,386 @@
+
+.veyra-admin-login,
+.veyra-admin-shell {
+  min-height: 100vh;
+  font-family: Inter, Arial, sans-serif;
+  color: #203b32;
+}
+
+.veyra-admin-login {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #f3f3ed;
+}
+
+.veyra-login-panel {
+  width: 100%;
+  max-width: 430px;
+  padding: 48px 42px;
+  background: #fff;
+  border: 1px solid #e7e8df;
+  box-shadow: 0 20px 70px #17382c12;
+}
+
+.veyra-login-symbol {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  background: #1d4236;
+  color: #d6bc83;
+  font-family: Georgia, serif;
+  font-size: 30px;
+}
+
+.veyra-login-eyebrow,
+.veyra-admin-eyebrow,
+.veyra-sidebar-caption {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #a58a59;
+}
+
+.veyra-login-eyebrow { margin-top: 32px; }
+
+.veyra-login-panel h1 {
+  margin: 12px 0;
+  font-family: Georgia, serif;
+  font-size: 39px;
+  font-weight: 400;
+}
+
+.veyra-login-subtitle {
+  color: #7c8982;
+  font-size: 14px;
+  margin-bottom: 34px;
+}
+
+.veyra-login-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.veyra-login-panel label {
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.veyra-login-panel input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #dce2db;
+  border-radius: 4px;
+  background: #fafbf8;
+  color: #203b32;
+  font-size: 14px;
+}
+
+.veyra-login-panel form button {
+  margin-top: 18px;
+  padding: 16px;
+  border: none;
+  border-radius: 4px;
+  background: #1d4236;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.veyra-login-panel form button:disabled {
+  opacity: .65;
+  cursor: wait;
+}
+
+.veyra-login-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+  color: #89968e;
+  font-size: 12px;
+}
+
+.veyra-admin-error {
+  color: #a33333;
+  background: #fff2f0;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.veyra-admin-shell {
+  display: flex;
+  background: #f6f7f3;
+}
+
+.veyra-admin-sidebar {
+  width: 245px;
+  min-height: 100vh;
+  flex-shrink: 0;
+  background: #193a30;
+  color: #fff;
+  padding: 34px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.veyra-admin-brand {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  letter-spacing: 4px;
+}
+
+.veyra-admin-brand span { color: #c6aa72; }
+
+.veyra-sidebar-caption {
+  margin: 48px 0 18px;
+  color: #a9bdb2;
+}
+
+.veyra-sidebar-active,
+.veyra-admin-logout {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.veyra-sidebar-active {
+  background: #ffffff18;
+  color: #e7d5a6;
+}
+
+.veyra-admin-logout {
+  margin-top: auto;
+  background: transparent;
+  border: 0;
+  color: #d4e0d8;
+  cursor: pointer;
+  text-align: left;
+}
+
+.veyra-admin-main {
+  flex: 1;
+  min-width: 0;
+  padding: 50px clamp(20px, 4vw, 70px);
+}
+
+.veyra-admin-topbar,
+.veyra-enquiry-heading,
+.veyra-enquiry-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.veyra-admin-topbar h1 {
+  margin: 8px 0;
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 3vw, 43px);
+  font-weight: 400;
+}
+
+.veyra-admin-topbar p,
+.veyra-enquiry-heading p {
+  color: #89958d;
+  font-size: 14px;
+}
+
+.veyra-refresh {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #dce3dc;
+  border-radius: 5px;
+  padding: 12px 17px;
+  cursor: pointer;
+  color: #24483a;
+}
+
+.veyra-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 36px 0;
+}
+
+.veyra-stat {
+  text-align: left;
+  padding: 25px;
+  background: #fff;
+  border: 1px solid #e7eae4;
+  border-radius: 7px;
+  cursor: pointer;
+  color: #203b32;
+}
+
+.veyra-stat.selected {
+  border-color: #a9925e;
+  box-shadow: 0 0 0 1px #a9925e;
+}
+
+.veyra-stat span {
+  display: block;
+  font-size: 13px;
+  color: #7e8b83;
+  margin-bottom: 14px;
+}
+
+.veyra-stat strong {
+  font-family: Georgia, serif;
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.veyra-enquiry-panel {
+  background: #fff;
+  border: 1px solid #e7eae4;
+  border-radius: 8px;
+  padding: 28px;
+}
+
+.veyra-enquiry-heading h2 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.veyra-admin-search {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #e0e6de;
+  border-radius: 5px;
+  padding: 0 12px;
+  color: #84948b;
+}
+
+.veyra-admin-search input {
+  border: 0;
+  outline: 0;
+  padding: 13px 5px;
+  width: 240px;
+  color: #203b32;
+  background: transparent;
+}
+
+.veyra-enquiry-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 25px;
+}
+
+.veyra-enquiry-card {
+  border: 1px solid #e7eae4;
+  border-radius: 6px;
+  padding: 23px;
+}
+
+.veyra-enquiry-destination {
+  margin: 0 0 7px;
+  color: #aa8d57;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.veyra-enquiry-card h3 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.veyra-status {
+  padding: 9px 12px;
+  border-radius: 5px;
+  border: 1px solid #e1e6df;
+  background: #f3f6f0;
+  color: #315747;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.veyra-status.new {
+  background: #fff6e7;
+  color: #90611d;
+}
+
+.veyra-status.closed {
+  background: #edf0ef;
+  color: #65736c;
+}
+
+.veyra-enquiry-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px 25px;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #6c7c72;
+}
+
+.veyra-enquiry-details span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.veyra-enquiry-message {
+  margin: 20px 0 0;
+  padding: 14px;
+  background: #f7f8f4;
+  color: #53675a;
+  font-size: 13px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.veyra-enquiry-timestamp {
+  margin: 20px 0 0;
+  font-size: 11px;
+  color: #9ba69e;
+}
+
+.veyra-admin-empty {
+  padding: 65px 20px;
+  text-align: center;
+  color: #89958d;
+}
+
+@media (max-width: 900px) {
+  .veyra-admin-sidebar { width: 190px; }
+  .veyra-stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 650px) {
+  .veyra-admin-shell { flex-direction: column; }
+  .veyra-admin-sidebar {
+    width: 100%;
+    min-height: auto;
+    padding: 20px;
+  }
+  .veyra-sidebar-caption,
+  .veyra-sidebar-active { display: none; }
+  .veyra-admin-logout { margin-top: 12px; }
+  .veyra-admin-main { padding: 25px 15px; }
+  .veyra-admin-topbar,
+  .veyra-enquiry-heading { align-items: flex-start; flex-direction: column; }
+  .veyra-stats { gap: 10px; }
+  .veyra-stat { padding: 18px; }
+  .veyra-enquiry-panel { padding: 16px; }
+  .veyra-admin-search,
+  .veyra-admin-search input { width: 100%; }
+  .veyra-login-panel { padding: 35px 25px; }
+}

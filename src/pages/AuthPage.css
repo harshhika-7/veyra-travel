@@ -1,0 +1,303 @@
+
+.veyra-auth-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 52% 48%;
+  background: #f8f7f4;
+  color: #232b30;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.veyra-auth-visual {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 55px;
+  background:
+    url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=85')
+    center/cover no-repeat;
+  color: #fff;
+}
+
+.veyra-auth-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, .32),
+    rgba(0, 0, 0, .08) 35%,
+    rgba(0, 0, 0, .62)
+  );
+}
+
+.veyra-auth-logo,
+.veyra-auth-quote,
+.veyra-auth-photo-credit {
+  position: relative;
+  z-index: 1;
+}
+
+.veyra-auth-logo {
+  width: fit-content;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 29px;
+  letter-spacing: 5px;
+  text-decoration: none;
+}
+
+.veyra-auth-logo span {
+  color: #d6c4a8;
+}
+
+.veyra-auth-quote p {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 22px;
+}
+
+.veyra-auth-quote h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(45px, 5vw, 84px);
+  font-weight: 400;
+  line-height: 1.07;
+  letter-spacing: -2px;
+  margin: 0 0 25px;
+}
+
+.veyra-auth-quote h1 em {
+  font-weight: 400;
+}
+
+.veyra-auth-quote > span {
+  font-size: 14px;
+  color: #eee;
+}
+
+.veyra-auth-photo-credit {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #e2e2e2;
+}
+
+.veyra-auth-content {
+  min-height: 100vh;
+  padding: 44px clamp(25px, 5vw, 85px);
+  display: flex;
+  flex-direction: column;
+}
+
+.veyra-auth-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  color: #777f7d;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.veyra-auth-form-container {
+  width: 100%;
+  max-width: 430px;
+  margin: auto;
+  padding: 45px 0;
+}
+
+.veyra-auth-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #9a8c7b;
+  margin-bottom: 17px;
+}
+
+.veyra-auth-form-container h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 3vw, 46px);
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0 0 16px;
+}
+
+.veyra-auth-description {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #818884;
+  margin-bottom: 35px;
+}
+
+.veyra-auth-tabs {
+  display: flex;
+  gap: 35px;
+  border-bottom: 1px solid #dcded9;
+  margin-bottom: 30px;
+}
+
+.veyra-auth-tabs button {
+  padding: 0 0 15px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: #939994;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.veyra-auth-tabs button.active {
+  color: #232b30;
+  border-bottom-color: #232b30;
+  font-weight: 600;
+}
+
+.veyra-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.veyra-auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.veyra-auth-field label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.veyra-auth-field input {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid #d9dcd6;
+  border-radius: 3px;
+  outline: none;
+  background: #fff;
+  color: #232b30;
+  font: inherit;
+  font-size: 14px;
+}
+
+.veyra-auth-field input:focus {
+  border-color: #9a8c7b;
+}
+
+.veyra-auth-field small {
+  font-size: 11px;
+  color: #939994;
+}
+
+.veyra-auth-password {
+  position: relative;
+}
+
+.veyra-auth-password input {
+  padding-right: 50px;
+}
+
+.veyra-auth-password button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: transparent;
+  color: #77817b;
+  cursor: pointer;
+}
+
+.veyra-auth-submit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px 20px;
+  margin-top: 7px;
+  border: none;
+  border-radius: 3px;
+  background: #232b30;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.veyra-auth-submit:hover {
+  background: #404a4f;
+}
+
+.veyra-auth-submit:disabled {
+  opacity: .65;
+  cursor: wait;
+}
+
+.veyra-auth-error {
+  padding: 12px 14px;
+  background: #fff0ec;
+  color: #a43c31;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.veyra-auth-bottom {
+  margin-top: 30px;
+  color: #838c86;
+  font-size: 13px;
+  text-align: center;
+}
+
+.veyra-auth-bottom button {
+  border: 0;
+  background: transparent;
+  color: #232b30;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.veyra-auth-copyright {
+  color: #a1a6a0;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 850px) {
+  .veyra-auth-page {
+    grid-template-columns: 1fr;
+  }
+
+  .veyra-auth-visual {
+    min-height: 320px;
+    padding: 25px;
+  }
+
+  .veyra-auth-quote h1 {
+    font-size: 45px;
+  }
+
+  .veyra-auth-photo-credit {
+    display: none;
+  }
+
+  .veyra-auth-content {
+    min-height: auto;
+    padding: 30px 25px;
+  }
+
+  .veyra-auth-form-container {
+    padding: 50px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .veyra-auth-submit {
+    transition: none;
+  }
+}

@@ -1,0 +1,242 @@
+
+.veyra-wishlist-page {
+  min-height: 100vh;
+  background: #f8f7f4;
+  color: #232b30;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.veyra-wishlist-header {
+  height: 90px;
+  padding: 0 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e2dc;
+}
+
+.veyra-wishlist-logo {
+  font-family: Georgia, serif;
+  font-size: 27px;
+  letter-spacing: 5px;
+  color: #232b30;
+  text-decoration: none;
+}
+
+.veyra-wishlist-logo span {
+  color: #a99a87;
+}
+
+.veyra-wishlist-back {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #626c66;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.veyra-wishlist-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 85px 6% 120px;
+  min-height: 70vh;
+}
+
+.veyra-wishlist-intro > p,
+.veyra-wishlist-count {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #a99a87;
+}
+
+.veyra-wishlist-intro h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(43px, 5vw, 75px);
+  font-weight: 400;
+  letter-spacing: -2px;
+  margin: 20px 0;
+}
+
+.veyra-wishlist-intro h1 em {
+  color: #a99a87;
+  font-weight: 400;
+}
+
+.veyra-wishlist-intro > span {
+  font-size: 15px;
+  color: #818884;
+}
+
+.veyra-wishlist-count {
+  margin-top: 65px;
+  margin-bottom: 22px;
+}
+
+.veyra-wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.veyra-wishlist-card {
+  background: #fff;
+  border: 1px solid #e5e2dc;
+  padding-bottom: 24px;
+}
+
+.veyra-wishlist-image-link {
+  position: relative;
+  display: block;
+  height: 300px;
+  overflow: hidden;
+}
+
+.veyra-wishlist-image-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+
+.veyra-wishlist-image-link:hover img {
+  transform: scale(1.06);
+}
+
+.veyra-wishlist-image-link > span {
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 10px #000;
+}
+
+.veyra-wishlist-card-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 22px 10px;
+}
+
+.veyra-wishlist-card-info p {
+  color: #a99a87;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin: 0 0 10px;
+}
+
+.veyra-wishlist-card-info h2 {
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.veyra-wishlist-card-info button {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  background: #f4f2ed;
+  border: 0;
+  cursor: pointer;
+  color: #626c66;
+}
+
+.veyra-wishlist-card-info button:disabled {
+  opacity: .5;
+}
+
+.veyra-wishlist-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 22px 0;
+  color: #232b30;
+  text-decoration: none;
+  font-size: 13px;
+  border-bottom: 1px solid #a99a87;
+  padding-bottom: 7px;
+}
+
+.veyra-wishlist-empty {
+  margin-top: 60px;
+  padding: 90px 25px;
+  border: 1px solid #e5e2dc;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.veyra-wishlist-empty h2 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.veyra-wishlist-empty p {
+  color: #818884;
+  max-width: 350px;
+  line-height: 1.7;
+}
+
+.veyra-wishlist-empty a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #232b30;
+  text-decoration: none;
+  border-bottom: 1px solid #a99a87;
+  padding-bottom: 8px;
+}
+
+.veyra-wishlist-page-error {
+  margin-top: 30px;
+  padding: 15px;
+  background: #fff0ec;
+  color: #a43c31;
+}
+
+.veyra-wishlist-footer {
+  padding: 30px 6%;
+  border-top: 1px solid #e5e2dc;
+  color: #a1a6a0;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 950px) {
+  .veyra-wishlist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .veyra-wishlist-container {
+    padding: 55px 20px 80px;
+  }
+
+  .veyra-wishlist-header {
+    padding: 0 20px;
+  }
+
+  .veyra-wishlist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .veyra-wishlist-image-link {
+    height: 270px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .veyra-wishlist-image-link img {
+    transition: none;
+  }
+}
