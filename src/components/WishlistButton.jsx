@@ -4,7 +4,7 @@ import { Heart } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import './WishlistButton.css'
 
-const API = 'http://localhost:5000/api/users/wishlist'
+const API = 'https://veyra-travel.onrender.com/api/users/wishlist'
 
 export default function WishlistButton({ slug }) {
   const navigate = useNavigate()

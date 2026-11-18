@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowUpRight, MapPin, Clock3 } from 'lucide-react'
 import { useState } from 'react'
 import './DestinationPage.css'
 
-const API_URL = 'http://localhost:5000'
+const API_URL = 'https://veyra-travel.onrender.com'
 
 function DestinationPage() {
   const { slug } = useParams()

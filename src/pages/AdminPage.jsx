@@ -13,7 +13,7 @@ import {
 } from 'lucide-react'
 import './AdminPage.css'
 
-const API = 'http://localhost:5000/api/admin'
+const API = 'https://veyra-travel.onrender.com/api/admin'
 const TOKEN_KEY = 'veyra_admin_token'
 
 export default function AdminPage() {

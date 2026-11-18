@@ -4,7 +4,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import { ArrowRight, ArrowLeft, Eye, EyeOff } from 'lucide-react'
 import './AuthPage.css'
 
-const API = 'http://localhost:5000/api/users'
+const API = 'https://veyra-travel.onrender.com/api/users'
 
 export default function AuthPage() {
   const navigate = useNavigate()

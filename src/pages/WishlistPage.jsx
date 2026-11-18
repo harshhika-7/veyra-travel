@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowUpRight, Heart, Trash2 } from 'lucide-react'
 import { destinations } from '../data/destinations'
 import './WishlistPage.css'
 
-const API = 'http://localhost:5000/api/users/wishlist'
+const API = 'https://veyra-travel.onrender.com/api/users/wishlist'
 
 export default function WishlistPage() {
   const navigate = useNavigate()
