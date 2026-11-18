@@ -1,4 +1,3 @@
-
 const express = require('express')
 const Enquiry = require('../models/Enquiry')
 
@@ -27,6 +26,17 @@ router.post('/', async (req, res) => {
       return res.status(400).json({
         success: false,
         message: 'Please fill in all required fields.',
+      })
+    }
+
+    // Indian mobile number validation
+    if (
+      typeof phone !== 'string' ||
+      !/^[6-9][0-9]{9}$/.test(phone)
+    ) {
+      return res.status(400).json({
+        success: false,
+        message: 'Please enter a valid 10-digit Indian mobile number.',
       })
     }
 

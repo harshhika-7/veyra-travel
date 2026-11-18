@@ -29,6 +29,10 @@ function DestinationPage() {
   const handleInputChange = (event) => {
     const { name, value } = event.target
 
+    if (name === 'phone' && !/^[0-9]{0,10}$/.test(value)) {
+      return
+    }
+
     setFormData((previous) => ({
       ...previous,
       [name]: value,
@@ -41,6 +45,13 @@ function DestinationPage() {
     event.preventDefault()
 
     if (!destination || isSubmitting) return
+
+    if (!/^[6-9][0-9]{9}$/.test(formData.phone)) {
+      setFormStatus(
+        'Please enter a valid 10-digit Indian mobile number.'
+      )
+      return
+    }
 
     setIsSubmitting(true)
     setFormStatus('')
@@ -99,9 +110,11 @@ function DestinationPage() {
         <section className="trip-overview">
           <div className="trip-overview-heading">
             <span className="trip-label">404 / NOT FOUND</span>
+
             <h2>
               Destination <em>not found.</em>
             </h2>
+
             <a href="/" className="trip-enquire">
               <ArrowLeft size={18} /> Back to home
             </a>
@@ -115,6 +128,7 @@ function DestinationPage() {
 
   return (
     <div className="trip-page">
+
       {/* NAVIGATION */}
       <header className="trip-navbar">
         <a href="/" className="trip-logo">
@@ -142,12 +156,12 @@ function DestinationPage() {
           </span>
 
           <h1>
-  {destination.name}<span>.</span>
-</h1>
+            {destination.name}<span>.</span>
+          </h1>
 
-<WishlistButton slug={destination.slug} />
+          <WishlistButton slug={destination.slug} />
 
-<p>{destination.tagline}</p>
+          <p>{destination.tagline}</p>
 
           <div className="trip-meta">
             <span>
@@ -162,7 +176,10 @@ function DestinationPage() {
 
         <div className="trip-hero-bottom">
           <span>01 / THE EXPERIENCE</span>
-          <a href="#overview">SCROLL TO EXPLORE ↓</a>
+
+          <a href="#overview">
+            SCROLL TO EXPLORE ↓
+          </a>
         </div>
       </section>
 
@@ -334,6 +351,7 @@ function DestinationPage() {
               </p>
             </div>
 
+            {/* FULL NAME */}
             <div className="trip-form-field">
               <label htmlFor="booking-name">
                 FULL NAME *
@@ -352,6 +370,8 @@ function DestinationPage() {
             </div>
 
             <div className="trip-form-row">
+
+              {/* EMAIL */}
               <div className="trip-form-field">
                 <label htmlFor="booking-email">
                   EMAIL ADDRESS *
@@ -369,6 +389,7 @@ function DestinationPage() {
                 />
               </div>
 
+              {/* PHONE NUMBER WITH VALIDATION */}
               <div className="trip-form-field">
                 <label htmlFor="booking-phone">
                   PHONE NUMBER *
@@ -378,16 +399,22 @@ function DestinationPage() {
                   id="booking-phone"
                   type="tel"
                   name="phone"
-                  placeholder="+91 98765 43210"
+                  placeholder="10-digit mobile number"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  autoComplete="tel"
+                  autoComplete="tel-national"
+                  inputMode="numeric"
+                  maxLength={10}
+                  pattern="[6-9][0-9]{9}"
+                  title="Enter a valid 10-digit Indian mobile number starting with 6, 7, 8 or 9"
                   required
                 />
               </div>
             </div>
 
             <div className="trip-form-row">
+
+              {/* TRAVEL DATE */}
               <div className="trip-form-field">
                 <label htmlFor="booking-date">
                   PREFERRED TRAVEL DATE *
@@ -404,6 +431,7 @@ function DestinationPage() {
                 />
               </div>
 
+              {/* TRAVELLERS */}
               <div className="trip-form-field">
                 <label htmlFor="booking-travellers">
                   TRAVELLERS *
@@ -426,6 +454,7 @@ function DestinationPage() {
               </div>
             </div>
 
+            {/* MESSAGE */}
             <div className="trip-form-field">
               <label htmlFor="booking-message">
                 ANYTHING ELSE?
@@ -441,6 +470,7 @@ function DestinationPage() {
               />
             </div>
 
+            {/* SUBMIT BUTTON */}
             <button
               className="trip-form-submit"
               type="submit"
@@ -449,9 +479,11 @@ function DestinationPage() {
               {isSubmitting
                 ? 'Submitting...'
                 : 'Send enquiry'}
+
               <ArrowUpRight size={19} />
             </button>
 
+            {/* FORM STATUS */}
             {formStatus && (
               <p
                 className="trip-form-status"
